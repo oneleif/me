@@ -1,20 +1,63 @@
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/1342803/36623515-7293b4ec-18d3-11e8-85ab-4e2f8fb38fbd.png" width="320" alt="API Template">
-    <br>
-    <br>
-    <a href="http://docs.vapor.codes/3.0/">
-        <img src="http://img.shields.io/badge/read_the-docs-2196f3.svg" alt="Documentation">
-    </a>
-    <a href="https://discord.gg/vapor">
-        <img src="https://img.shields.io/discord/431917998102675485.svg" alt="Team Chat">
-    </a>
-    <a href="LICENSE">
-        <img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License">
-    </a>
-    <a href="https://circleci.com/gh/vapor/api-template">
-        <img src="https://circleci.com/gh/vapor/api-template.svg?style=shield" alt="Continuous Integration">
-    </a>
-    <a href="https://swift.org">
-        <img src="http://img.shields.io/badge/swift-4.1-brightgreen.svg" alt="Swift 4.1">
-    </a>
+    <h1>Models</h1>
+   
+```    
+struct Social: Encodable {
+	let title: String
+	let url: String
+}
+
+struct Experience: Encodable {
+	let title: String
+	let company: String
+	let time: String
+	let description: String?
+
+	init(title: String, company: String, time: String, description: String? = nil) {
+		self.title = title
+		self.company = company
+		self.time = time
+		self.description = description
+	}
+}
+
+struct Skill: Encodable {
+	let title: String
+	let description: String?
+
+	init(title: String, description: String? = nil) {
+		self.title = title
+		self.description = description
+	}
+}
+
+struct Link: Encodable {
+	let title: String
+	let description: String?
+	let url: String
+
+	init(title: String, url: String, description: String? = nil) {
+		self.title = title
+		self.description = description
+		self.url = url
+	}
+}
+
+struct ProfileContext: Encodable {
+	// Profile Info
+	let title: String
+	let name: String
+	let bio: String
+	let email: String
+	let phone: String
+	let location: String
+	let socialMedia: [Social]
+	// Work Experience
+	let experiences: [Experience]
+	// Awards / Skills
+	let skills: [Skill]
+	// Links
+	let links: [Link]
+}
+```
 </p>
