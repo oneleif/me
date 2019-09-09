@@ -1,7 +1,6 @@
 #set("content") {
-
+<b><h1>Profile</h1></b>
 	<div id="profile">
-		<h1>#(title)</h1>
 		<h2>#(name)</h2>
 		<h3>#(bio)</h3>
 		<p>#(email)</p>
@@ -9,19 +8,21 @@
 		<p>#(location)</p>
 		</div>
 
-		<div id="social">
+<b><h1>Social</h1></b>
+		<div id="social" class="section">
 #for(social in socialMedia) {
 
-	<div class="socialLink">
+	<div id="socialLink" class="child">
 		<a href=#(social.url)>#(social.title)</a>
 		</div>
 
 }
 </div>
 
-<div id="experiences">
+<b><h1>Experiences</h1></b>
+<div id="experiences" class="section">
 #for(experience in experiences) {
-	<div class="experience">
+	<div id="experience" class="child">
 		<h4>#(experience.title)</h4>
 		<h5>#(experience.company)</h5>
 		<p>#(experience.time)</p>
@@ -30,18 +31,20 @@
 }
 </div>
 
-<div id="skills">
+<b><h1>Skills</h1></b>
+<div id="skills" class="section">
 #for(skill in skills) {
-	<div class="skill">
+	<div id="skill" class="child">
 		<p>#(skill.title)</p>
 		<p>#(skill.description)</p>
 		</div>
 }
 </div>
 
-<div id="links">
+<b><h1>Links</h1></b>
+<div id="links" class="section">
 #for(link in links) {
-	<div class="link">
+	<div id="link" class="child">
 		<a href=#(link.url)><h4>#(link.title)</h4></a>
 		<p>#(link.description)</p>
 		</div>

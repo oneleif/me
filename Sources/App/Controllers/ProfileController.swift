@@ -11,13 +11,20 @@ class ProfileController: RouteCollection {
 			       name: "Zach Eriksen",
 			       bio: "Swift Developer",
 			       email: "zmeriksen@icloud.com",
-			       phone: "123-456-7890",
+			       phone: "",
 			       location: "Remote",
 			       socialMedia: [
-				       Social(title: "Twitter", url: "https://www.twitter.com/zmeriksen")
+				       Social(title: "Twitter", url: "https://www.twitter.com/zmeriksen"),
+						Social(title: "LinkedIn", url: "https://www.linkedin.com/in/zmeriksen/"),
+						Social(title: "GitHub", url: "https://github.com/zmeriksen"),
+						Social(title: "GitLab", url: "https://gitlab.com/_leif"),
+						Social(title: "Medium", url: "https://medium.com/@_leif")
 			       ],
 			       experiences: [
-				       Experience(title: "iOS Developer", company: "From Now On", time: "2 Months", description: "Lead iOS Developer")
+			
+			Experience(title: "iOS Developer", company: "From Now On", time: "Aug 2019 - Present", description: "Lead iOS Developer working on the FanX platform. FanX platform has over 70 schools. Developed Augmented Reality feature for ticket scanning."),
+				       Experience(title: "iOS Developer", company: "Client Resources Inc", time: "Jan 2017 - Aug 2019", description: "As an iOS Developer for the Solutions Center in CRi I worked on Arvest Go, a native iOS app, along with other iOS apps. My work at CRi has also focused on mobile automation, innovation, and ADA (Americans Disabilities Act)"),
+				Experience(title: "iOS Developer", company: "University of Nebraska at Omaha", time: "Aug 2014 - Jan 2017", description: "I was the iOS developer for the Attic at the University of Nebraska Omaha and worked on apps such as, MavMate, PricePoint, etc. Also I have worked on Unity3D projects, zSpace, Range of Motion, and Four Forces.")
 			       ],
 			       skills: [
 				       Skill(title: "Swift"),
@@ -25,7 +32,9 @@ class ProfileController: RouteCollection {
 			       ],
 			       links: [
 				       Link(title: "oneleif",  url: "https://oneleif.github.io/olPages/", description: "Open Source Development Group"),
-				       Link(title: "twoleif", url: "https://www.twoleif.com")
+				       Link(title: "twoleif", url: "https://www.twoleif.com"),
+						Link(title: "Blogs for CRi", url: "https://www.clientresourcesinc.com/author/zeriksen/"),
+						Link(title: "Learn Swift Omaha!", url: "https://www.meetup.com/LearnSwiftOmaha/")
 			       ])
 		return try req.view().render("index", context)
 
